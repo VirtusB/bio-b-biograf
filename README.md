@@ -16,7 +16,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 **Systembesrkivelse**
 
 - Verdensbillede
-  - ![](C:\Users\Bruger\OneDrive - Rastec ApS\H3-programmering\Biograf-BioB-Uge2\Screen 1.png)
+  - ![](billeder/Screen%201.png)
   - Hardware
     - CPU: 2 x Intel Xeon E5-2670
     - CPU køler: 2 x Noctua NH-U12DXi4
@@ -36,7 +36,7 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Moderne web applikation til Bio B biografen. Admin portal som giver Bio B personale mulighed for, at oprette, redigere og slette forestillinger, sale samt film. Der er 2 typer portal brugere, kun-se-brugere og adgang-til-alt brugere, så Bio B selv kan vælge hvilke medarbejdere der skal kunne oprette, redigere og slette. Desuden skal personalet have mulighed for, at validere en billet, tjekke betaling og status via admin portalen, samt refundering og ændring af status. Kunder skal have deres egen portal, hvor de kan se deres tidligere bestillinger, ændre på en igangværende bestilling og se hvilket rabattrin de er på. Kunder går ét rabattrin op, for hver 10 gennemførte bestillinger. Kunder skal kunne slette deres konto og ændre på deres kontaktinformation. Bio B personale skal også kunne ændre i kundens informationer, f.eks. i tilfælde hvor kunden foretrækker ikke at gøre det selv.
 
 - UML diagram
-  - ![1540896309722](C:\Users\Bruger\AppData\Roaming\Typora\typora-user-images\1540896309722.png)
+  - ![](billeder/1540896309722.png)
 
 
 
