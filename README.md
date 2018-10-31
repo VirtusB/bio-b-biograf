@@ -47,14 +47,16 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Programmets begrænsinger
 
 - Programmet skal ikke kunne:
-  - ?
-  - ?
+  - Siden skal ikke være optimeret til mobiler eller tablets
 
 ## Programmets fremtid
 
 - Forventet levetid: 5 år
 - Udvidelsesmuligheder i senere versioner
-  - ?
+  - App til Android og iOS
+  - Responsiv webside
+  - Eget anmeldelses- og ratingsystem
+  - Videoafspiller på siden til trailers
 
 ## Brugerprofil
 
@@ -63,11 +65,10 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Besøgende brugere på Bio B siden, mulige kunder
 - Der kræves ingen erfaring, for at kunne benytte siden eller admin portalen
 
-Krav til udviklingsforløbet
+## Krav til udviklingsforløbet
 
 - Krav fra udvikler og kunden
   - Møde hver 14. dag
-  - ?
 - Hvilke vejledninger, designmetoder og standarder skal anvendes?
   - Objekt orienteret
   - UML diagram af klasserne
@@ -77,6 +78,8 @@ Krav til udviklingsforløbet
 - Programmeringssprog
   - C#
   - SQL
+  - HTML/CSS
+  - JavaScript
 - Review
   - ?
 - Hvilken dokumentation, skal der udarbejdes
@@ -94,14 +97,14 @@ Krav til udviklingsforløbet
 ## Forudsætninger
 
 - Udstyr som kunden skal stille til rådighed under udviklingen
-  - ?
+  - Intet. Udviklerne har eget udstyr.
 - Personer som kunden skal stille til rådighed
-  - ?
+  - En  gruppe på 5 mennesker, til at teste brugervenligheden af siden
 
 ## Definitioner
 
 - Formatet på væsentlige data, som kunden ønsker
-  - ?
+  - PDF
 
 ## Funktionelle krav
 
@@ -163,3 +166,181 @@ Krav til udviklingsforløbet
     | Business rules    | Systemet skal altid spørge, om brugeren er sikker på at ville slette sin konto |                 |            |
     | Other information |                                                              |                 |            |
     | Assumptions       |                                                              |                 |            |
+
+  - Personale - Ændring af rolle for bruger
+
+    | ID and Name       | 4 - Ændring af rolle for bruger                              |                 |            |
+    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Description       | Den ansatte skal ændre rolle for en bruger                   |                 |            |
+    | Trigger           | Den ansatte klikker "Rediger brugere"                        |                 |            |
+    | Preconditions     | 1. Den ansatte har en konto <br>2. Den ansatte er logget ind<br>3. Den ansatte er super-admin |                 |            |
+    | Postconditions    |                                                              |                 |            |
+    | Normal flow       | 1. Den ansatte klikker "Administrer brugere"   <br>2. Den ansatte vælger en specifik bruger <br>3. Den ansatte klikker "Rediger bruger"   <br>4. Den ansatte vælger rolle for brugeren i dropdown  <br>5. Den ansatte klikker "Gem"  <br>6. Brugerens rolle er gemt i databasen  <br> |                 |            |
+    | Alternative flow  |                                                              |                 |            |
+    | Exceptions        | 1. Hvis den ansatte ikke er super-admin                      |                 |            |
+    | Priority          | Høj                                                          |                 |            |
+    | Frequence of use  |                                                              |                 |            |
+    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder |                 |            |
+    | Other information |                                                              |                 |            |
+    | Assumptions       |                                                              |                 |            |
+
+  - Personale - oprettelse af film
+
+    | ID and Name       | 5 - Oprettelse af film                                       |                 |            |
+    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Description       | Den ansatte skal oprette en film                             |                 |            |
+    | Trigger           | Den ansatte klikker "Opret film"                             |                 |            |
+    | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte er super-admin<br />4. Filmen skal ikke allerede eksistere |                 |            |
+    | Postconditions    |                                                              |                 |            |
+    | Normal flow       | 1. Den ansatte klikker "Administrer film"    <br>2. Den ansatte klikker "Opret film" <br>3. Den ansatte udfylder alle felterne <br>4. Den ansatte klikker "Gem film"   <br>5. Filmen bliver gemt i databasen |                 |            |
+    | Alternative flow  |                                                              |                 |            |
+    | Exceptions        | 1. Hvis den ansatte ikke er super-admin<br />2. Hvis filmen allerede eksisterer<br>3. Hvis alle felter ikke er udfyldt |                 |            |
+    | Priority          | Høj                                                          |                 |            |
+    | Frequence of use  |                                                              |                 |            |
+    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at filem ikke allerede findes |                 |            |
+    | Other information |                                                              |                 |            |
+    | Assumptions       |                                                              |                 |            |
+
+
+
+  - Personale - oprettelse af show
+
+    | ID and Name       | 6 - Oprettelse af show                                       |                 |            |
+    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Description       | Den ansatte skal oprette et show                             |                 |            |
+    | Trigger           | Den ansatte klikker "Opret show"                             |                 |            |
+    | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte er super-admin<br />4. Showet skal ikke eksistere i salen i samme tidsramme<br>5. Der skal vælges en film til showet |                 |            |
+    | Postconditions    |                                                              |                 |            |
+    | Normal flow       | 1. Den ansatte klikker "Administrer shows"    <br>2. Den ansatte klikker "Opret show" <br>3. Den ansatte udfylder alle felterne <br>4. Den ansatte klikker "Gem show"   <br>5. Showet bliver gemt i databasen |                 |            |
+    | Alternative flow  |                                                              |                 |            |
+    | Exceptions        | 1. Hvis den ansatte ikke er super-admin<br />2. Hvis showet overlapper med et andet show i samme sal<br />3. Hvis alle felter ikke er udfyldt |                 |            |
+    | Priority          | Høj                                                          |                 |            |
+    | Frequence of use  |                                                              |                 |            |
+    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at showet ikke allerede findes |                 |            |
+    | Other information |                                                              |                 |            |
+    | Assumptions       |                                                              |                 |            |
+
+  - Personale - validering af billtetter
+
+    | ID and Name       | 7 - validering af billtetter                                 |                 |            |
+    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Description       | Den ansatte skal validere en billet                          |                 |            |
+    | Trigger           | Den ansatte klikker "Valider billet"                         |                 |            |
+    | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte har rollen "Personale" eller over<br />4. Der er en kunde med en billet |                 |            |
+    | Postconditions    |                                                              |                 |            |
+    | Normal flow       | 1. Den ansatte klikker "Valider billet"    <br>2. Den ansatte indtaster billet nummeret <br>3. Den ansatte klikker "Valider" <br>4. Den ansatte får svaret om billetten er gyldig   <br>5. Billetten er gyldig |                 |            |
+    | Alternative flow  | Ved trin 5 er billetten ikke gyldig                          |                 |            |
+    | Exceptions        | 1. Hvis den ansatte ikke har rollen "Personale"<br />2. Hvis billetten ikke er gyldig |                 |            |
+    | Priority          | Høj                                                          |                 |            |
+    | Frequence of use  |                                                              |                 |            |
+    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at tjekke om billetten er gyldig |                 |            |
+    | Other information |                                                              |                 |            |
+    | Assumptions       |                                                              |                 |            |
+
+## Bruger-grænseflade
+
+- Krav til måden programmet betjenes på
+  - Mus
+  - Tastatur
+  - Skærm
+  - Internet
+  - Computer
+- Forskellige brugeres rettigheder til brug af forskellige funktioner
+  - Personale
+    - Validere billetter
+    - Logge ind på admin portalen
+  - Super-admin
+    - Validere billetter
+    - Oprette, slette og redigere film
+    - Oprette, slette og redigere shows
+    - Administrering af roller
+  - Kunde
+    - Logge ind
+    - Ændre kontaktinformationer
+    - Bestille billetter
+    - Se ordre historik
+    - Se optjent rabat
+
+## Hardware-grænseflade
+
+- Hvordan er delene i systemet hardwaremæssigt bygget sammen
+  - ?
+- På hvilken elektrisk form optræder informationerne
+  - Via GUI interface på siden
+
+## Kommunikations-grænseflade
+
+- Overordnet kommunikationsprotokol
+  - HTTP / HTTPS
+
+## Software-grænseflade
+
+- Operativsystemet som programmellet skal køre under
+  - Windows
+  - MacOS
+  - Linux
+- Benyttelse af prædefinerede softwaremoduler
+  - Entity Framework
+  - SQL Server Management Studio
+
+## Krav til programmets ydelse
+
+- Specifikke tidskrav til udførelse af bestemte funktioner
+  - Asynkrone funktioner
+  - Webside load tid under 1.5 sekund
+
+## Kvalitetsfaktorer
+
+- Hastighed af siden
+  - Siden skal loade indenfor 1.5 sekund
+  - Brugeren skal have mindst have en forbindelse på 12 mbit
+  - Brugeren skal have en computer der ikke er over 5 år gammel
+  - SQL Server holdes opdateret og serveren skal have en gigabit forbindelse
+  - Vigtighed: 5
+
+## Pålidelighed
+
+- Nøjagtighed
+  - Siden skal have en oppetid på mindst 99%
+  - Siden skal være 100% nøjagtighed i billetvalidering
+- Håndtering af fejlbetjening
+  - Fikses af udviklerne mod betaling
+
+## Vedligeholdelsesvenlighed
+
+- Hvor lang tid tager det at finde en fejl
+  - Mindre problemer: 6 timer
+  - Mellem problemer: 24 timer
+  - Større problemer: op til 7 dage
+  - Tider vil variere alt efter beskrivelse af problemet
+- Hvor nemt er det at lave en mindre tilpasning til et ændret behov
+  - Afhængig af forespørgelsen, men generelt nemt
+
+## Udvidelsesvenlighed
+
+- Hvor nemt er det at lave en egentlig udvidelse af produktet
+  - Afhængig af udvidelse
+
+## Brugervenlighed
+
+- Hvor lang tid tager det for en ny bruger at lære at betjene produktet
+  - Personale: under 1 dag, hvis brugermanualen benyttes
+  - Bruger: med gennemsnitlige it-egenskaber, under 5 minutter
+
+## Effektivitet
+
+- Hvilke dele af produktet skal prioriteres høj effektivitet
+  - Bestilling af billetter
+  - Validering af billetter
+
+## E/R diagram
+
+![](billeder/erdiagram.png)
