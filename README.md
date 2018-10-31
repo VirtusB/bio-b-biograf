@@ -147,12 +147,19 @@ Krav til udviklingsforløbet
 
   - Kunde - sletning af konto
 
-    | ID and Name    | 3 - Sletning af konto                                        |                 |            |
-    | -------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by     | Virtus                                                       | Date Created    | 30.10.2018 |
-    | Primary actor  | Bruger med konto på Bio B siden                              | Secondary actor | X          |
-    | Description    | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
-    | Trigger        | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
-    | Preconditions  | 1. Brugeren har en konto<br />2. Brugeren er logget ind      |                 |            |
-    | Postconditions |                                                              |                 |            |
-    | Normal flow    | 1. Brugeren klikker "Min konto"  <br>2. Brugeren "Slet konto" <br>3. Brugeren bliver spurgt, om han/hun er sikker  <br>4. Brugeren klikker "Ja" <br>5. Brugerens bedes indtaste sin email i popup vindue <br>6. Brugeren kan nu klikke på "Slet" knappen <br>7. Brugeren klikker på "Slet" og kontoen fjernes fra databasen |                 |            |
+    | ID and Name       | 3 - Sletning af konto                                        |                 |            |
+    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor     | Bruger med konto på Bio B siden                              | Secondary actor | X          |
+    | Description       | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
+    | Trigger           | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
+    | Preconditions     | 1. Brugeren har en konto<br />2. Brugeren er logget ind      |                 |            |
+    | Postconditions    |                                                              |                 |            |
+    | Normal flow       | 1. Brugeren klikker "Min konto"  <br>2. Brugeren "Slet konto" <br>3. Brugeren bliver spurgt, om han/hun er sikker  <br>4. Brugeren klikker "Ja" <br>5. Brugerens bedes indtaste sin email i popup vindue <br>6. Brugeren kan nu klikke på "Slet" knappen <br>7. Brugeren klikker på "Slet" og kontoen fjernes fra databasen |                 |            |
+    | Alternative flow  | 1. Brugeren klikker "Min konto"  <br/>2. Brugeren "Slet konto" <br>3. Brugeren bliver spurgt, om han/hun er sikker<br>4. Brugeren klikker "Nej" <br>5. Brugerens konto bliver ikke slettet |                 |            |
+    | Exceptions        | 1. Hvis brugeren ikke udfylder e-mailen korrekt              |                 |            |
+    | Priority          | Høj                                                          |                 |            |
+    | Frequence of use  |                                                              |                 |            |
+    | Business rules    | Systemet skal altid spørge, om brugeren er sikker på at ville slette sin konto |                 |            |
+    | Other information |                                                              |                 |            |
+    | Assumptions       |                                                              |                 |            |
