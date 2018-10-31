@@ -119,7 +119,7 @@ Krav til udviklingsforløbet
     | Postconditions    | 1. Brugeren skal benytte sig af billetten                    |                 |            |
     | Normal flow       | 1. Brugeren klikker "Bestil" <br>2. Brugeren bliver sendt til betalingsgateway <br>3. Brugeren udfyder oplysninger og klikker "Betal" <br>4. Betalingen bliver accepteret <br>5. Reservationen får en "Paid" status i databasen <br>6. Brugeren får vist billetten og kan klikke "Print" |                 |            |
     | Alternative flow  | 1. Brugeren er ikke logget ind<br>2. Brugeren klikker på en film og klikker "Bestil"<br>3. Brugeren bliver sendt til log-ind siden |                 |            |
-    | Exceptions        | - Hvis brugeren ikke har råd<br>- Hvis der ikke er flere pladser |                 |            |
+    | Exceptions        | 1. Hvis brugeren ikke har råd<br>2. Hvis der ikke er flere pladser |                 |            |
     | Priority          | Høj                                                          |                 |            |
     | Frequence of use  |                                                              |                 |            |
     | Business rules    | Systemet skal ikke lade en bruger købe en billet, hvis brugeren ikke er logget ind |                 |            |
@@ -134,16 +134,11 @@ Krav til udviklingsforløbet
     | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor | X          |
     | Description       | Brugeren skal oprette en konto på Bio B websiden             |                 |            |
     | Trigger           | Brugeren klikker på "Opret konto", eller skal købe en billet |                 |            |
-    | Preconditions     | 1. Brugeren har en e-mail <br>                               |                 |            |
+    | Preconditions     | 1. Brugeren har en e-mail                                    |                 |            |
     | Postconditions    | 1. Brugeren skal bruge kontooplysningerne til at logge ind   |                 |            |
-    | Normal flow       | 1. Brugeren klikker "Opret konto" <br/>2. Brugeren bliver sendt til "Opret konto" siden
-3. Brugeren udfyder alle oplysningerne og klikker "Opret" 
-4. Brugerens oplysninger bliver gemt i databasen
-5. Brugeren får at vide, at kontoen er oprettet
-6. Brugeren kan nu logge ind |                 |            |
-    | Alternative flow  | 1. Brugeren er ikke logget ind<br />2. Brugeren klikker på en film og klikker "Bestil"
-3. Brugeren bliver sendt til log-ind siden |                 |            |
-    | Exceptions        | - Hvis brugeren ikke udfylder alle felterne <br>- Hvis brugeren udfylder et felt med ugyldige oplysninger |                 |            |
+    | Normal flow       | 1. Brugeren klikker "Opret konto" <br/>2. Brugeren bliver sendt til "Opret konto" siden<br>3. Brugeren udfyder alle oplysningerne og klikker "Opret" <br>4. Brugerens oplysninger bliver gemt i databasen<br>5. Brugeren får at vide, at kontoen er oprettet<br>6. Brugeren kan nu logge ind |                 |            |
+    | Alternative flow  | 1. Brugeren er ikke logget ind<br />2. Brugeren klikker på en film og klikker "Bestil"<br>3. Brugeren bliver sendt til log-ind siden |                 |            |
+    | Exceptions        | 1. Hvis brugeren ikke udfylder alle felterne <br>2. Hvis brugeren udfylder et felt med ugyldige oplysninger |                 |            |
     | Priority          | Høj                                                          |                 |            |
     | Frequence of use  |                                                              |                 |            |
     | Business rules    | Systemet skal ikke lade en bruger oprette en konto, hvis brugeren ikke er over 18 år, eller ikke har udfyldt alle felterne korrekt |                 |            |
@@ -152,22 +147,12 @@ Krav til udviklingsforløbet
 
   - Kunde - sletning af konto
 
-    | ID and Name       | 3 - Sletning af konto                                        |                 |            |
-    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
-    | Primary actor     | Bruger med konto på Bio B siden                              | Secondary actor | X          |
-    | Description       | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
-    | Trigger           | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
-    | Preconditions     | 1. Brugeren har en konto<br />2. Brugeren er logget ind      |                 |            |
-    | Postconditions    |                                                              |                 |            |
-    | Normal flow       | 1. Brugeren klikker "Min konto"  <br>2. Brugeren "Slet konto" <br>3. Brugeren bliver spurgt, om han/hun er sikker  <br>4. Brugeren klikker "Ja" <br>5. Brugerens bedes indtaste sin email i popup vindue <br>6. Brugeren kan nu klikke på "Slet" knappen <br>7. Brugeren klikker på "Slet" og kontoen fjernes fra databasen |                 |            |
-    | Alternative flow  | 1. Brugeren klikker "Min konto"  <br/>2. Brugeren "Slet konto" 
-3. Brugeren bliver spurgt, om han/hun er sikker  
-4. Brugeren klikker "Nej" 
-5. Brugerens konto bliver ikke slettet |                 |            |
-    | Exceptions        | - Hvis brugeren ikke udfylder e-mailen korrekt               |                 |            |
-    | Priority          | Høj                                                          |                 |            |
-    | Frequence of use  |                                                              |                 |            |
-    | Business rules    | Systemet skal altid spørge, om brugeren er sikker på at ville slette sin konto |                 |            |
-    | Other information |                                                              |                 |            |
-    | Assumptions       |                                                              |                 |            |
+    | ID and Name    | 3 - Sletning af konto                                        |                 |            |
+    | -------------- | ------------------------------------------------------------ | --------------- | ---------- |
+    | Created by     | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Primary actor  | Bruger med konto på Bio B siden                              | Secondary actor | X          |
+    | Description    | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
+    | Trigger        | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
+    | Preconditions  | 1. Brugeren har en konto<br />2. Brugeren er logget ind      |                 |            |
+    | Postconditions |                                                              |                 |            |
+    | Normal flow    | 1. Brugeren klikker "Min konto"  <br>2. Brugeren "Slet konto" <br>3. Brugeren bliver spurgt, om han/hun er sikker  <br>4. Brugeren klikker "Ja" <br>5. Brugerens bedes indtaste sin email i popup vindue <br>6. Brugeren kan nu klikke på "Slet" knappen <br>7. Brugeren klikker på "Slet" og kontoen fjernes fra databasen |                 |            |
