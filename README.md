@@ -344,3 +344,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## E/R diagram
 
 ![](billeder/erdiagram.png)
+
+## Kanban
+
+![](billeder/kanban.png)
