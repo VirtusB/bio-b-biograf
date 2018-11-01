@@ -1,34 +1,58 @@
 # Biograf Bio B webapplikation
 
-- [Biograf Bio B webapplikation](#biograf-bio-b-webapplikation)
-  * [Indledning](#indledning)
-  * [Krav](#krav)
-  * [Systembesrkivelse](#systembesrkivelse)
-  * [Programmets funktion](#programmets-funktion)
-  * [Programmets begrænsinger](#programmets-begrænsinger)
-  * [Programmets fremtid](#programmets-fremtid)
-  * [Brugerprofil](#brugerprofil)
-  * [Krav til udviklingsforløbet](#krav-til-udviklingsforløbet)
-  * [Omfang af kundeleverence](#omfang-af-kundeleverence)
-  * [Forudsætninger](#forudsætninger)
-  * [Definitioner](#definitioner)
-  * [Funktionelle krav](#funktionelle-krav)
-  * [Bruger-grænseflade](#bruger-grænseflade)
-  * [Hardware-grænseflade](#hardware-grænseflade)
-  * [Kommunikations-grænseflade](#kommunikations-grænseflade)
-  * [Software-grænseflade](#software-grænseflade)
-  * [Krav til programmets ydelse](#krav-til-programmets-ydelse)
-  * [Kvalitetsfaktorer](#kvalitetsfaktorer)
-  * [Pålidelighed](#pålidelighed)
-  * [Vedligeholdelsesvenlighed](#vedligeholdelsesvenlighed)
-  * [Udvidelsesvenlighed](#udvidelsesvenlighed)
-  * [Brugervenlighed](#brugervenlighed)
-  * [Effektivitet](#effektivitet)
-  * [E/R diagram](#er-diagram)
-  * [Kanban](#kanban)
-  * [Wireframes](#wireframes)
+\- [Biograf Bio B webapplikation](#biograf-bio-b-webapplikation)
 
+  \* [Indledning](#indledning)
 
+  \* [Krav](#krav)
+
+  \* [Systembesrkivelse](#systembesrkivelse)
+
+  \* [Programmets funktion](#programmets-funktion)
+
+  \* [Programmets begrænsinger](#programmets-begrænsinger)
+
+  \* [Programmets fremtid](#programmets-fremtid)
+
+  \* [Brugerprofil](#brugerprofil)
+
+  \* [Krav til udviklingsforløbet](#krav-til-udviklingsforløbet)
+
+  \* [Omfang af kundeleverence](#omfang-af-kundeleverence)
+
+  \* [Forudsætninger](#forudsætninger)
+
+  \* [Definitioner](#definitioner)
+
+  \* [Funktionelle krav](#funktionelle-krav)
+
+  \* [Bruger-grænseflade](#bruger-grænseflade)
+
+  \* [Hardware-grænseflade](#hardware-grænseflade)
+
+  \* [Kommunikations-grænseflade](#kommunikations-grænseflade)
+
+  \* [Software-grænseflade](#software-grænseflade)
+
+  \* [Krav til programmets ydelse](#krav-til-programmets-ydelse)
+
+  \* [Kvalitetsfaktorer](#kvalitetsfaktorer)
+
+  \* [Pålidelighed](#pålidelighed)
+
+  \* [Vedligeholdelsesvenlighed](#vedligeholdelsesvenlighed)
+
+  \* [Udvidelsesvenlighed](#udvidelsesvenlighed)
+
+  \* [Brugervenlighed](#brugervenlighed)
+
+  \* [Effektivitet](#effektivitet)
+
+  \* [E/R diagram](#er-diagram)
+
+  \* [Kanban](#kanban)
+
+  \* [Wireframes](#wireframes)#wireframes)
 
 ## Indledning
 
@@ -83,6 +107,7 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Responsiv webside
   - Eget anmeldelses- og ratingsystem
   - Videoafspiller på siden til trailers
+  - Film anbefalinger baseret på brugerens tidligere ordre
 
 ## Brugerprofil
 
