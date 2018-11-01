@@ -66,7 +66,6 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Moderne web applikation til Bio B biografen. Admin portal som giver Bio B personale mulighed for, at oprette, redigere og slette forestillinger, sale samt film. Der er 2 typer portal brugere, kun-se-brugere og adgang-til-alt brugere, så Bio B selv kan vælge hvilke medarbejdere der skal kunne oprette, redigere og slette. Desuden skal personalet have mulighed for, at validere en billet, tjekke betaling og status via admin portalen, samt refundering og ændring af status. Kunder skal have deres egen portal, hvor de kan se deres tidligere bestillinger, ændre på en igangværende bestilling og se hvilket rabattrin de er på. Kunder går ét rabattrin op, for hver 10 gennemførte bestillinger. Kunder skal kunne slette deres konto og ændre på deres kontaktinformation. Bio B personale skal også kunne ændre i kundens informationer, f.eks. i tilfælde hvor kunden foretrækker ikke at gøre det selv.
   - Rabattrin
     - Kunde som har en konto får 5% rabat, dette er trin 1. For hver 10 gennemførte ordre kunden har, stiger de 1 rabattrin, til et maksimum af 10% ved trin 5.
-
 - UML diagram
   - ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/1540896309722.png?token=ASnQly_S9tT-aJKjQ_klaRTdy1PGqO8Dks5b5ACewA%3D%3D)
 
@@ -100,6 +99,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
 - Krav fra udvikler og kunden
   - Møde hver 14. dag
+  - "Fixed Price" betalingsmodel 
 - Hvilke vejledninger, designmetoder og standarder skal anvendes?
   - Objekt orienteret
   - UML diagram af klasserne
@@ -126,14 +126,20 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Forudsætninger
 
 - Udstyr som kunden skal stille til rådighed under udviklingen
-  - Intet. Udviklerne har eget udstyr.
+  - VPN tunnel til biografens interne netværk
+  - API nøgle til betalingsgateway
 - Personer som kunden skal stille til rådighed
   - En  gruppe på 5 mennesker, til at teste brugervenligheden af siden
 
 ## Definitioner
 
 - Formatet på væsentlige data, som kunden ønsker
-  - PDF
+  - Brugermanual
+    - PDF
+  - Ordrebekræftelse
+    - PDF på e-mail
+  - Billetter
+    - PDF og docx til print
 
 ## Funktionelle krav
 
@@ -144,7 +150,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | ID and Name       | 1 - Køb af billet                                            |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
     | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor | X          |
+    | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor |            |
     | Description       | Brugeren skal købe en billet                                 |                 |            |
     | Trigger           | Brugeren klikker på en film på siden                         |                 |            |
     | Preconditions     | 1. Brugeren er logget ind<br>2. Brugeren skal kunne betale online <br>3. Brugeren skal have råd til billetten |                 |            |
@@ -163,7 +169,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | ID and Name       | 2 - Oprettelse af konto                                      |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
     | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor | X          |
+    | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor |            |
     | Description       | Brugeren skal oprette en konto på Bio B websiden             |                 |            |
     | Trigger           | Brugeren klikker på "Opret konto", eller skal købe en billet |                 |            |
     | Preconditions     | 1. Brugeren har en e-mail                                    |                 |            |
@@ -182,7 +188,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | ID and Name       | 3 - Sletning af konto                                        |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
     | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Bruger med konto på Bio B siden                              | Secondary actor | X          |
+    | Primary actor     | Bruger med konto på Bio B siden                              | Secondary actor |            |
     | Description       | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
     | Trigger           | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
     | Preconditions     | 1. Brugeren har en konto<br />2. Brugeren er logget ind      |                 |            |
@@ -201,7 +207,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | ID and Name       | 4 - Ændring af rolle for bruger                              |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
     | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor |            |
     | Description       | Den ansatte skal ændre rolle for en bruger                   |                 |            |
     | Trigger           | Den ansatte klikker "Rediger brugere"                        |                 |            |
     | Preconditions     | 1. Den ansatte har en konto <br>2. Den ansatte er logget ind<br>3. Den ansatte er super-admin |                 |            |
@@ -220,7 +226,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | ID and Name       | 5 - Oprettelse af film                                       |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
     | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
+    | Primary actor     | Personale på Bio B siden                                     | Secondary actor |            |
     | Description       | Den ansatte skal oprette en film                             |                 |            |
     | Trigger           | Den ansatte klikker "Opret film"                             |                 |            |
     | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte er super-admin<br />4. Filmen skal ikke allerede eksistere |                 |            |
@@ -234,45 +240,43 @@ Der er følgende overordnede krav til websitet/løsningen.
     | Other information |                                                              |                 |            |
     | Assumptions       |                                                              |                 |            |
 
+- Personale - oprettelse af show
 
+  | ID and Name       | 6 - Oprettelse af show                                       |                 |            |
+  | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+  | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
+  | Primary actor     | Personale på Bio B siden                                     | Secondary actor |            |
+  | Description       | Den ansatte skal oprette et show                             |                 |            |
+  | Trigger           | Den ansatte klikker "Opret show"                             |                 |            |
+  | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte er super-admin<br />4. Showet skal ikke eksistere i salen i samme tidsramme<br>5. Der skal vælges en film til showet |                 |            |
+  | Postconditions    |                                                              |                 |            |
+  | Normal flow       | 1. Den ansatte klikker "Administrer shows"    <br>2. Den ansatte klikker "Opret show" <br>3. Den ansatte udfylder alle felterne <br>4. Den ansatte klikker "Gem show"   <br>5. Showet bliver gemt i databasen |                 |            |
+  | Alternative flow  |                                                              |                 |            |
+  | Exceptions        | 1. Hvis den ansatte ikke er super-admin<br />2. Hvis showet overlapper med et andet show i samme sal<br />3. Hvis alle felter ikke er udfyldt |                 |            |
+  | Priority          | Høj                                                          |                 |            |
+  | Frequence of use  |                                                              |                 |            |
+  | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at showet ikke allerede findes |                 |            |
+  | Other information |                                                              |                 |            |
+  | Assumptions       |                                                              |                 |            |
 
-  - Personale - oprettelse af show
+- Personale - validering af billtetter
 
-    | ID and Name       | 6 - Oprettelse af show                                       |                 |            |
-    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
-    | Description       | Den ansatte skal oprette et show                             |                 |            |
-    | Trigger           | Den ansatte klikker "Opret show"                             |                 |            |
-    | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte er super-admin<br />4. Showet skal ikke eksistere i salen i samme tidsramme<br>5. Der skal vælges en film til showet |                 |            |
-    | Postconditions    |                                                              |                 |            |
-    | Normal flow       | 1. Den ansatte klikker "Administrer shows"    <br>2. Den ansatte klikker "Opret show" <br>3. Den ansatte udfylder alle felterne <br>4. Den ansatte klikker "Gem show"   <br>5. Showet bliver gemt i databasen |                 |            |
-    | Alternative flow  |                                                              |                 |            |
-    | Exceptions        | 1. Hvis den ansatte ikke er super-admin<br />2. Hvis showet overlapper med et andet show i samme sal<br />3. Hvis alle felter ikke er udfyldt |                 |            |
-    | Priority          | Høj                                                          |                 |            |
-    | Frequence of use  |                                                              |                 |            |
-    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at showet ikke allerede findes |                 |            |
-    | Other information |                                                              |                 |            |
-    | Assumptions       |                                                              |                 |            |
-
-  - Personale - validering af billtetter
-
-    | ID and Name       | 7 - validering af billtetter                                 |                 |            |
-    | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
-    | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
-    | Description       | Den ansatte skal validere en billet                          |                 |            |
-    | Trigger           | Den ansatte klikker "Valider billet"                         |                 |            |
-    | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte har rollen "Personale" eller over<br />4. Der er en kunde med en billet |                 |            |
-    | Postconditions    |                                                              |                 |            |
-    | Normal flow       | 1. Den ansatte klikker "Valider billet"    <br>2. Den ansatte indtaster billet nummeret <br>3. Den ansatte klikker "Valider" <br>4. Den ansatte får svaret om billetten er gyldig   <br>5. Billetten er gyldig |                 |            |
-    | Alternative flow  | Ved trin 5 er billetten ikke gyldig                          |                 |            |
-    | Exceptions        | 1. Hvis den ansatte ikke har rollen "Personale"<br />2. Hvis billetten ikke er gyldig |                 |            |
-    | Priority          | Høj                                                          |                 |            |
-    | Frequence of use  |                                                              |                 |            |
-    | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at tjekke om billetten er gyldig |                 |            |
-    | Other information |                                                              |                 |            |
-    | Assumptions       |                                                              |                 |            |
+  | ID and Name       | 7 - validering af billtetter                                 |                 |            |
+  | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
+  | Created by        | Virtus og Morten                                             | Date Created    | 31.10.2018 |
+  | Primary actor     | Personale på Bio B siden                                     | Secondary actor |            |
+  | Description       | Den ansatte skal validere en billet                          |                 |            |
+  | Trigger           | Den ansatte klikker "Valider billet"                         |                 |            |
+  | Preconditions     | 1. Den ansatte har en konto  <br>2. Den ansatte er logget ind <br>3. Den ansatte har rollen "Personale" eller over<br />4. Der er en kunde med en billet |                 |            |
+  | Postconditions    |                                                              |                 |            |
+  | Normal flow       | 1. Den ansatte klikker "Valider billet"    <br>2. Den ansatte indtaster billet nummeret <br>3. Den ansatte klikker "Valider" <br>4. Den ansatte får svaret om billetten er gyldig   <br>5. Billetten er gyldig |                 |            |
+  | Alternative flow  | Ved trin 5 kan billetten være ugyldig, og en fejl gives i stedet |                 |            |
+  | Exceptions        | 1. Hvis den ansatte ikke har rollen "Personale"<br />2. Hvis billetten ikke er gyldig |                 |            |
+  | Priority          | Høj                                                          |                 |            |
+  | Frequence of use  |                                                              |                 |            |
+  | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at tjekke om billetten er gyldig |                 |            |
+  | Other information |                                                              |                 |            |
+  | Assumptions       |                                                              |                 |            |
 
 ## Bruger-grænseflade
 
@@ -292,7 +296,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     - Oprette, slette og redigere shows
     - Administrering af roller
   - Kunde
-    - Logge ind
+    - Logge ind på kunde portal
     - Ændre kontaktinformationer
     - Bestille billetter
     - Se ordre historik
@@ -301,9 +305,9 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Hardware-grænseflade
 
 - Hvordan er delene i systemet hardwaremæssigt bygget sammen
-  - Som en helt normal server. RAM, GPU og 2 x CPU sidder i bundkortet.
+  - Som en gennemsnitlig server. RAM, GPU og 2 x CPU sidder i bundkortet, med 2 x CPU kølere
 - På hvilken elektrisk form optræder informationerne
-  - Via GUI interface på siden
+  - Som en bytestream
 
 ## Kommunikations-grænseflade
 
@@ -340,7 +344,7 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Reservationer har et unikt, automatisk genereret ID i databasen
   - Reservations ID'et er en primær nøgle
   - Billet status bliver ændret med det samme, efter første validering, så billetten ikke kan genbruges
-  - Vigtighed: 5 
+  - Vigtighed: 5
 
 ## Pålidelighed
 
@@ -363,7 +367,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Udvidelsesvenlighed
 
 - Hvor nemt er det at lave en egentlig udvidelse af produktet
-  - Afhængig af udvidelse, men fundamentet af system er bygget sådan, at det vil være nemt at udvide
+  - Afhængig af udvidelse, men fundamentet af systemet er bygget sådan, at det vil være nemt at udvide
 
 ## Brugervenlighed
 
@@ -409,5 +413,5 @@ Der er følgende overordnede krav til websitet/løsningen.
 - Kunde
   - Som en kunde kan jeg optjene rabatter, ved at købe flere billetter
   - Som en kunde kan jeg tjekke mine forrige bestillinger, og selv udskrive mine kvitteringer
-  - Som en kunde kan jeg selv vælge, om jeg vil betale online eller kontakt i biografen
+  - Som en kunde kan jeg selv vælge, om jeg vil betale online eller kontant i biografen
   - Som en kunde kan jeg selv vælge, hvor jeg vil sidde, og jeg skal kunne ændre det online
