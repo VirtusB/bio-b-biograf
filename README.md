@@ -143,7 +143,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 1 - Køb af billet                                            |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor | X          |
     | Description       | Brugeren skal købe en billet                                 |                 |            |
     | Trigger           | Brugeren klikker på en film på siden                         |                 |            |
@@ -162,7 +162,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 2 - Oprettelse af konto                                      |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Besøgende på Bio B siden                                     | Secondary actor | X          |
     | Description       | Brugeren skal oprette en konto på Bio B websiden             |                 |            |
     | Trigger           | Brugeren klikker på "Opret konto", eller skal købe en billet |                 |            |
@@ -181,7 +181,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 3 - Sletning af konto                                        |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Bruger med konto på Bio B siden                              | Secondary actor | X          |
     | Description       | Brugeren skal slette sin konto på Bio B websiden             |                 |            |
     | Trigger           | Brugeren klikker på "Slet konto" på "Min konto" siden        |                 |            |
@@ -200,7 +200,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 4 - Ændring af rolle for bruger                              |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
     | Description       | Den ansatte skal ændre rolle for en bruger                   |                 |            |
     | Trigger           | Den ansatte klikker "Rediger brugere"                        |                 |            |
@@ -219,7 +219,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 5 - Oprettelse af film                                       |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
     | Description       | Den ansatte skal oprette en film                             |                 |            |
     | Trigger           | Den ansatte klikker "Opret film"                             |                 |            |
@@ -240,7 +240,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 6 - Oprettelse af show                                       |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
     | Description       | Den ansatte skal oprette et show                             |                 |            |
     | Trigger           | Den ansatte klikker "Opret show"                             |                 |            |
@@ -259,7 +259,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
     | ID and Name       | 7 - validering af billtetter                                 |                 |            |
     | ----------------- | ------------------------------------------------------------ | --------------- | ---------- |
-    | Created by        | Virtus                                                       | Date Created    | 30.10.2018 |
+    | Created by        | Virtus og Morten                                             | Date Created    | 30.10.2018 |
     | Primary actor     | Personale på Bio B siden                                     | Secondary actor | X          |
     | Description       | Den ansatte skal validere en billet                          |                 |            |
     | Trigger           | Den ansatte klikker "Valider billet"                         |                 |            |
@@ -273,7 +273,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at tjekke om billetten er gyldig |                 |            |
     | Other information |                                                              |                 |            |
     | Assumptions       |                                                              |                 |            |
-
+    
 ## Bruger-grænseflade
 
 - Krav til måden programmet betjenes på
