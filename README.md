@@ -380,3 +380,11 @@ Der er følgende overordnede krav til websitet/løsningen.
 - Wireframe af "Min konto" siden, for en kunde.
 
   ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Min%20konto.png?token=ASnQlzDa70v1twMfnU1PP-ZAb2OGSBeoks5b5AC2wA%3D%3D)
+
+- Wireframe af "Mit rabattrin"
+
+  ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Mit%20rabattrin.png)
+
+- Wireframe af "Mine bestillinger"
+
+  ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Mine%20bestillinger.png)
