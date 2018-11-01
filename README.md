@@ -46,7 +46,9 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Systembesrkivelse
 
 - Verdensbillede
-  - ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Screen%201.png?token=ASnQl72Dknk6HZKtpeDu7hpLrbbSbl5Jks5b5ADIwA%3D%3D)
+
+  ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Screen%201.png?token=ASnQl72Dknk6HZKtpeDu7hpLrbbSbl5Jks5b5ADIwA%3D%3D)
+
   - Hardware
     - CPU: 2 x Intel Xeon E5-2670
     - CPU køler: 2 x Noctua NH-U12DXi4
