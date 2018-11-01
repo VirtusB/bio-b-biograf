@@ -334,6 +334,11 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Brugeren skal have en computer der ikke er over 5 år gammel
   - SQL Server holdes opdateret og serveren skal have en gigabit forbindelse
   - Vigtighed: 5
+- Nøjagtighed af billet validering
+  - Reservationer har et unikt, automatisk genereret ID i databasen
+  - Reservations ID'et er en primær nøgle
+  - Billet status bliver ændret med det samme, efter første validering, så billetten ikke kan genbruges
+  - Vigtighed: 5
 
 ## Pålidelighed
 
