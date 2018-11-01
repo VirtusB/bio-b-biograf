@@ -80,8 +80,6 @@ Der er følgende overordnede krav til websitet/løsningen.
   - SQL
   - HTML/CSS
   - JavaScript
-- Review
-  - ?
 - Hvilken dokumentation, skal der udarbejdes
   - Brugermanual til admin portalen
 - Hvordan skal ændringer i kravspecifikationen håndteres
@@ -272,7 +270,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Hardware-grænseflade
 
 - Hvordan er delene i systemet hardwaremæssigt bygget sammen
-  - ?
+  - Som en helt normal server. RAM, GPU og 2 x CPU sidder i bundkortet.
 - På hvilken elektrisk form optræder informationerne
   - Via GUI interface på siden
 
@@ -280,15 +278,16 @@ Der er følgende overordnede krav til websitet/løsningen.
 
 - Overordnet kommunikationsprotokol
   - HTTP / HTTPS
+  - TCP/IP
 
 ## Software-grænseflade
 
-- Operativsystemet som programmellet skal køre under
+- Operativsystemet som programmet skal køre under
   - Windows
   - MacOS
   - Linux
 - Benyttelse af prædefinerede softwaremoduler
-  - Entity Framework
+  - Entity Framework Core
   - SQL Server Management Studio
 
 ## Krav til programmets ydelse
@@ -327,12 +326,12 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Udvidelsesvenlighed
 
 - Hvor nemt er det at lave en egentlig udvidelse af produktet
-  - Afhængig af udvidelse
+  - Afhængig af udvidelse, men fundamentet af system er bygget sådan, at det vil være nemt at udvide
 
 ## Brugervenlighed
 
 - Hvor lang tid tager det for en ny bruger at lære at betjene produktet
-  - Personale: under 1 dag, hvis brugermanualen benyttes
+  - Personale: højst 1 time, hvis brugermanualen benyttes
   - Bruger: med gennemsnitlige it-egenskaber, under 5 minutter
 
 ## Effektivitet
@@ -348,3 +347,9 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Kanban
 
 ![](billeder/kanban.png)
+
+## Wireframes
+
+- Wireframe af "Min konto" siden, for en kunde.
+
+  ![](billeder/Min%20konto.png)
