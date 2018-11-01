@@ -32,7 +32,7 @@
 
 ## Indledning
 
-B Bio skal have et nyt website til at administrere forestillinger og til at håndtere salg af billetter til deres kunder. De ter vigtigt for B Bio at få deres kunder registreret i deres eget system. Kunden bliver derved ikke fristet af film, der vises i andre biografer. Og det gør det nemmere for kunden, at bestille billetter til flere forestillinger. Udover at kunden selv kan vedligeholde egne data, skal Bio B også have mulighed for at vedligeholde kunder i kundebasen
+B Bio skal have et nyt website til at administrere forestillinger og til at håndtere salg af billetter til deres kunder. Det er vigtigt for B Bio at få deres kunder registreret i deres eget system. Kunden bliver derved ikke fristet af film, der vises i andre biografer. Og det gør det nemmere for kunden, at bestille billetter til flere forestillinger. Udover at kunden selv kan vedligeholde egne data, skal Bio B også have mulighed for at vedligeholde kunder i kundebasen
 
 ## Krav
 
@@ -273,7 +273,7 @@ Der er følgende overordnede krav til websitet/løsningen.
     | Business rules    | Systemet skal altid sørge for, at den ansatte har tilstrækkelige rettigheder, og at tjekke om billetten er gyldig |                 |            |
     | Other information |                                                              |                 |            |
     | Assumptions       |                                                              |                 |            |
-    
+
 ## Bruger-grænseflade
 
 - Krav til måden programmet betjenes på
