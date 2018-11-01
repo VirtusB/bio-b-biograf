@@ -65,11 +65,16 @@ Der er følgende overordnede krav til websitet/løsningen.
 ## Programmets funktion
 
 - Grundigere beskrivelse
+
   - Moderne web applikation til Bio B biografen. Admin portal som giver Bio B personale mulighed for, at oprette, redigere og slette forestillinger, sale samt film. Der er 2 typer portal brugere, kun-se-brugere og adgang-til-alt brugere, så Bio B selv kan vælge hvilke medarbejdere der skal kunne oprette, redigere og slette. Desuden skal personalet have mulighed for, at validere en billet, tjekke betaling og status via admin portalen, samt refundering og ændring af status. Kunder skal have deres egen portal, hvor de kan se deres tidligere bestillinger, ændre på en igangværende bestilling og se hvilket rabattrin de er på. Kunder går ét rabattrin op, for hver 10 gennemførte bestillinger. Kunder skal kunne slette deres konto og ændre på deres kontaktinformation. Bio B personale skal også kunne ændre i kundens informationer, f.eks. i tilfælde hvor kunden foretrækker ikke at gøre det selv.
   - Rabattrin
     - Kunde som har en konto får 5% rabat, dette er trin 1. For hver 10 gennemførte ordre kunden har, stiger de 1 rabattrin, til et maksimum af 10% ved trin 5.
+
 - UML diagram
-  - ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/1540896309722.png?token=ASnQly_S9tT-aJKjQ_klaRTdy1PGqO8Dks5b5ACewA%3D%3D)
+
+  ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/1540896309722.png?token=ASnQly_S9tT-aJKjQ_klaRTdy1PGqO8Dks5b5ACewA%3D%3D)
+
+
 
 
 
