@@ -391,13 +391,15 @@ Der er følgende overordnede krav til websitet/løsningen.
 
   ![](https://raw.githubusercontent.com/VirtusB/bio-b-biograf/master/billeder/Mine%20bestillinger.png)
 
-  ## User Stories
+## User Stories
 
 - Personale
   - Som en super-admin bruger, kan jeg oprette, slette og redigere film og forestillinger
   - Som en admin bruger, kan jeg validere billtter
   - Som en super-admin bruger, kan jeg ændre på andre bruger's roller
+  - Som ansat kan jeg få et overblik over solgte sæder, så jeg kan hjælpe kunden med at finde de bedste pladser
 - Kunde
   - Som en kunde kan jeg optjene rabatter, ved at købe flere billetter
   - Som en kunde kan jeg tjekke mine forrige bestillinger, og selv udskrive mine kvitteringer
   - Som en kunde kan jeg selv vælge, om jeg vil betale online eller kontakt i biografen
+  - Som en kunde kan jeg selv vælge, hvor jeg vil sidde, og jeg skal kunne ændre det online
