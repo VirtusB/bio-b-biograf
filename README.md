@@ -74,6 +74,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
 - Programmet skal ikke kunne:
   - Siden skal ikke være optimeret til mobiler eller tablets
+  - Siden skal ikke være responsiv (media-queries)
 
 ## Programmets fremtid
 
