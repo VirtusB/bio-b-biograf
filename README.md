@@ -85,6 +85,7 @@ Der er følgende overordnede krav til websitet/løsningen.
   - Eget anmeldelses- og ratingsystem
   - Videoafspiller på siden til trailers
   - Film anbefalinger baseret på brugerens tidligere ordre
+  - Kupon koder via nyhedsbrevet
 
 ## Brugerprofil
 
