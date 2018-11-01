@@ -314,7 +314,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 - Operativsystemet som programmet skal køre under
   - Windows
   - MacOS
-  - Linux
+  - Chrome OS
 - Benyttelse af prædefinerede softwaremoduler
   - Entity Framework Core
   - SQL Server Management Studio
@@ -323,6 +323,7 @@ Der er følgende overordnede krav til websitet/løsningen.
 
 - Specifikke tidskrav til udførelse af bestemte funktioner
   - Asynkrone funktioner
+  - Hændelsesdrevet og ikke-blokerende I/O operationer
   - Webside load tid under 1.5 sekund
 
 ## Kvalitetsfaktorer
