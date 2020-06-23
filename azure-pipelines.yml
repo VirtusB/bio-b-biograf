@@ -21,5 +21,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '/BiografCSharpTest.UnitTests/BiografCSharpTest.UnitTests.csproj'
+    projects: $(Build.SourcesDirectory)/BiografCSharpTest.UnitTests/BiografCSharpTest.UnitTests.csproj
     testRunTitle: 'API test'
+
+   
