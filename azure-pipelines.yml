@@ -26,4 +26,3 @@ steps:
       **\*UnitTests*.dll
       !**\*TestAdapter.dll
       !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
