@@ -18,11 +18,12 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
 - task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
+  inputs:    
     testAssemblyVer2: |
-      **\*UnitTests*.dll
-      !**\*TestAdapter.dll
+      **\bin\$(BuildConfiguration)\**\*UnitTests*.dll         
       !**\obj\**
+      !**\xunit.runner.visualstudio.testadapter.dll
+      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
