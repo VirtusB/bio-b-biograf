@@ -10,21 +10,14 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 
 - task: VSTest@2
-  inputs:    
+  inputs:
+    testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\bin\$(BuildConfiguration)\**\*UnitTests*.dll         
+      **\*UnitTests*.dll
+      !**\*TestAdapter.dll
       !**\obj\**
-      !**\xunit.runner.visualstudio.testadapter.dll
-      !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    codeCoverageEnabled: false
+    otherConsoleOptions: '/framework:NETCoreApp,Version=v2.1'
