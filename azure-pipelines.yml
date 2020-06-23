@@ -11,6 +11,11 @@ pool:
 
 steps:
 
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageFeedSelector: 'nugetOrg'
+    versionSelector: 'latestStable'
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -21,3 +26,5 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: false
     otherConsoleOptions: '/framework:NETCoreApp,Version=v2.1'
+
+
