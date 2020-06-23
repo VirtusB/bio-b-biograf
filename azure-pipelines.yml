@@ -19,11 +19,11 @@ steps:
   displayName: 'Run a multi-line script'
 
 
-   - task: VSTest@2
-     inputs:
-       testSelector: 'testAssemblies'
-       testAssemblyVer2: |
-         **\*test*.dll
-         !**\*TestAdapter.dll
-         !**\obj\**
-       searchFolder: '$(System.DefaultWorkingDirectory)'
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
