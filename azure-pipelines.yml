@@ -15,11 +15,12 @@ pool:
 
 steps:
 
-
-- task: MSBuild@1
+- task: DotNetCoreCLI@2
   inputs:
-    solution: 'Biograf-CSharp-Test.sln'
+    command: 'build'
+    projects: 'Biograf-CSharp-Test.sln'
     configuration: '$(Config)'
+
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
