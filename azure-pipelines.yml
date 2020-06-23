@@ -18,10 +18,12 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: $(Build.SourcesDirectory)/Biograf-CSharp-Test/BiografCSharpTest.UnitTests/BiografCSharpTest.UnitTests.csproj
-    testRunTitle: 'API test'
 
-   
+   - task: VSTest@2
+     inputs:
+       testSelector: 'testAssemblies'
+       testAssemblyVer2: |
+         **\*test*.dll
+         !**\*TestAdapter.dll
+         !**\obj\**
+       searchFolder: '$(System.DefaultWorkingDirectory)'
