@@ -27,3 +27,4 @@ steps:
       !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
